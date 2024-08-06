@@ -1,4 +1,5 @@
-# 109 Python Problems for CCPS 109
+# This is my practice for the following problem set,
+## 109 Python Problems for CCPS 109
 
 Most of the coding problem collections that you can find online tend to feature nine garbage problems for every decent problem, because these collections allow any pimply undergraduate coder to submit their nonsense stream of consciousness even when these people don't begin to have a clue on how much they don't know to begin with. **This is not one of those collections.** This problem collection features only educational and interesting problems that have actual value and are not made-up make-work nonsense. I am ready to stand fully behind every problem with this claim, ready to be judged by any of these problems by my worst enemy. Every problem here comes with my personal guarantee of being worthwhile, educational, fun, interesting and specified in a manner that is not the rant of some toddler without the theory of other minds.
 
