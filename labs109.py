@@ -17,6 +17,8 @@ def ryerson_letter_grade(n):
         adjust = ""
     return "DCB"[tens - 5] + adjust
 
+
+#Even the odds
 def only_odd_digits(n):
     if n == 0:
         return False
@@ -28,6 +30,7 @@ def only_odd_digits(n):
     return True
 
 
+#Cyclops numbers
 def is_cyclops(n):
     if n == 0:
         return True
@@ -57,6 +60,7 @@ def is_cyclops(n):
     return True
 
 
+#Subsequent words
 def is_subsequence(small, large):
     it = iter(large)
     return all(char in it for char in small)
@@ -76,7 +80,7 @@ print(words_with_letters(words, letters2))
 print(words_with_letters(words, letters3))
 
 
-
+#Sum of two squares
 import math
 
 def sum_of_two_squares(n):
@@ -99,7 +103,32 @@ def sum_of_two_squares(n):
 print(sum_of_two_squares(74))
 print(sum_of_two_squares(85))
 print(sum_of_two_squares(3))
-print(sum_of_two_squares(25)) 
+print(sum_of_two_squares(25))
+
+
+#Expand Positive Integer Intervals
+def expand_intervals(intervals):
+    if not intervals:
+        return []
+    
+    result = []
+    parts = intervals.split(',')
+    
+    for part in parts:
+        if '-' in part:
+            start, end = map(int, part.split('-'))
+            result.extend(range(start, end + 1))
+        else:
+            result.append(int(part))
+    
+    return result
+
+print(expand_intervals(''))
+print(expand_intervals('42'))
+print(expand_intervals('4-5'))
+print(expand_intervals('4-6,10-12,16'))
+print(expand_intervals('1,3-9,12-14,9999'))
+
 
 
 
