@@ -155,4 +155,26 @@ print(count_and_say('11221122'))
 print(count_and_say('123456789'))        
 print(count_and_say('777777777777777'))  
 print(count_and_say(''))                 
-print(count_and_say('1'))                
+print(count_and_say('1'))
+
+
+# Revorse the vewels
+def reverse_vowels(text):
+    vowels = 'aeiouAEIOU'
+    vowels_in_text = [char for char in text if char in vowels]
+    result = []
+    for char in text:
+        if char in vowels:
+            reversed_vowel = vowels_in_text.pop()
+            if char.isupper():
+                result.append(reversed_vowel.upper())
+            else:
+                result.append(reversed_vowel.lower())
+        else:
+            result.append(char)
+    return ''.join(result)
+print(reverse_vowels('Bengt Hilgursson'))
+print(reverse_vowels('Why do you laugh? I chose death.'))
+print(reverse_vowels('These are the people you protect with your pain!')) 
+print(reverse_vowels('We had to sacrifice a couple of miners to free Bolivia.')) 
+print(reverse_vowels("Who's the leader of the club that's made for you and me? T-R-I-C-K-Y M-O-U-S-E! Tricky Mouse! TRICKY MOUSE! Tricky Mouse! TRICKY MOUSE! Forever let us hold our Hammers high! High! High! High!"))  
