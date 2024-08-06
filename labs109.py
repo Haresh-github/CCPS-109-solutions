@@ -18,7 +18,7 @@ def ryerson_letter_grade(n):
     return "DCB"[tens - 5] + adjust
 
 
-#Even the odds
+# Even the odds
 def only_odd_digits(n):
     if n == 0:
         return False
@@ -30,7 +30,7 @@ def only_odd_digits(n):
     return True
 
 
-#Cyclops numbers
+# Cyclops numbers
 def is_cyclops(n):
     if n == 0:
         return True
@@ -60,7 +60,7 @@ def is_cyclops(n):
     return True
 
 
-#Subsequent words
+# Subsequent words
 def is_subsequence(small, large):
     it = iter(large)
     return all(char in it for char in small)
@@ -80,7 +80,7 @@ print(words_with_letters(words, letters2))
 print(words_with_letters(words, letters3))
 
 
-#Sum of two squares
+# Sum of two squares
 import math
 
 def sum_of_two_squares(n):
@@ -106,7 +106,7 @@ print(sum_of_two_squares(3))
 print(sum_of_two_squares(25))
 
 
-#Expand Positive Integer Intervals
+# Expand Positive Integer Intervals
 def expand_intervals(intervals):
     if not intervals:
         return []
@@ -123,13 +123,36 @@ def expand_intervals(intervals):
     
     return result
 
-print(expand_intervals(''))
+# Test cases
+print(expand_intervals('')) 
 print(expand_intervals('42'))
-print(expand_intervals('4-5'))
-print(expand_intervals('4-6,10-12,16'))
+print(expand_intervals('4-5'))  
+print(expand_intervals('4-6,10-12,16')) 
 print(expand_intervals('1,3-9,12-14,9999'))
 
 
 
 
 
+# What do you hear, what do you say?
+def count_and_say(digits):
+    if not digits:
+        return ''
+    result = []
+    count = 1
+    current_digit = digits[0]
+    for digit in digits[1:]:
+        if digit == current_digit:
+            count += 1
+        else:
+            result.append(f'{count}{current_digit}')
+            current_digit = digit
+            count = 1
+    result.append(f'{count}{current_digit}')
+    return ''.join(result)
+print(count_and_say('333388822211177'))  
+print(count_and_say('11221122'))         
+print(count_and_say('123456789'))        
+print(count_and_say('777777777777777'))  
+print(count_and_say(''))                 
+print(count_and_say('1'))                
